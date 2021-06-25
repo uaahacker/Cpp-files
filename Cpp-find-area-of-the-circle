@@ -1,0 +1,62 @@
+#include <iostream>
+#include <limits>
+#include <ios> 
+
+using namespace std;
+int main()
+{
+    float a, pi=3.14, r;
+    string con;
+    cout<< "hello world\n"<<endl;
+    cout<< "Program to find area of the circle.\n";
+    cout << "To start the program, type 'y' or 'n': "<<endl;
+    while (true){
+    
+    cin >> con;
+    if ((con!="y") && (con!="n")){
+        cout <<"only enter y or n"<<endl;
+    }else {
+        break;
+    }
+    }
+    while (con=="y")
+    {
+    // ask for radius and apply on the equation
+        
+    while (true) 
+	{
+    cout << "give the value for radius: ";
+    cin >> r;
+    if(!cin)
+    {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Invalid integer!!! Please try again\n\n";
+    continue;
+    }
+    else break;
+	}
+    
+    a = pi*r*r;
+    cout<< "Area of the Circle is : "<< a << endl;
+
+
+    
+    cout << "want to repeat. type 'y' or 'n': "<<endl;
+    while (true)
+    {
+    //ask for repeat
+   
+    cin >> con;
+    if ((con!="y") && (con!="n")){
+        cout<< "only enter y or n" << endl;
+    }
+    else {
+        break;
+    }
+    }
+
+    }
+   
+    return 0;
+}
